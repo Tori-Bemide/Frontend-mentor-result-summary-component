@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/*
+===============
+Variables
+=============== 
+ */
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --font-size: 0.85rem;
+    --margin-bottom: 1rem;
+    --border-radius: 2rem;
+    --font-family: 'Hanken Grotesk',
+        sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.banner {
+    background: linear-gradient(to top, var(--light-royal-blue), var(--light-slate-blue));
+    color: var(--light-lavender);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    font-size: var(--font-size);
+    position: relative;
+    font-family: var(--font-family);
+}
+
+.result {
+
+    border-radius: 50%;
+    width: 8rem;
+    margin: 0 auto;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 8rem;
+    font-family: var(--font-family);
+    margin-bottom: 1.5rem;
+}
+
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.total-score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    font-family: var(--font-family);
+    margin-bottom: 0.4rem;
+}
+
+h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: var(--margin-bottom);
+    letter-spacing: 1.5px;
+}
+
+.text {
+    max-width: 14rem;
+    margin: 0 auto;
+    line-height: 1.5;
+
+}
+
+.summary {
+    padding: 1rem 2rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+.summary-title {
+    color: var(--dark-gray-blue);
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: var(--font-family);
+    margin-bottom: var(--margin-bottom);
+}
+
+.category {
+    display: flex;
+    /* background: red; */
+    padding: 0.85rem;
+    margin-bottom: var(--margin-bottom);
+    border-radius: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-1 {
+    background: hsla(0, 100%, 67%, 0.1);
+}
+
+.category-2 {
+    background: hsla(39, 100%, 56%, 0.1);
+}
+
+.category-3 {
+    background: hsla(166, 100%, 37%, 0.1);
+}
+
+.category-4 {
+    background: hsla(234, 85%, 45%, 0.1);
+}
+
+.title,
+.score {
+    margin: 0 0.25rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.category-heading {
+    text-transform: capitalize;
+    margin-left: 0.65rem;
+    font-weight: 700;
+}
+
+.category-heading-1 {
+    color: hsla(0, 100%, 67%, 0.9);
+}
+
+.category-heading-2 {
+    color: hsla(39, 100%, 56%, 0.9);
+}
+
+.category-heading-3 {
+    color: hsla(166, 100%, 37%, 0.9);
+}
+
+.category-heading-4 {
+    color: hsla(234, 85%, 45%, 0.9);
+}
+
+.score {
+    color: var(--dark-gray-blue);
+}
+
+.category-score {
+    font-weight: 800;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: hsl(226, 29%, 31%);
+    color: var(--pale-blue);
+    font-weight: 700;
+    border: transparent;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--light-royal-blue);
+}
+
+@media screen and (min-width:768px) {
+    :root {
+        --font-size: 0.98;
+    }
+
+    .container {
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .banner,
+    .summary {
+        min-height: 25rem;
+        min-width: 19rem;
+        box-shadow: 0 15px 55px rgba(0, 0, 0, 0.3);
+    }
+
+    .banner {
+        border-radius: var(--border-radius);
+
+    }
+
+    .summary {
+        margin-left: -2rem;
+        padding-left: 4rem;
+    }
+}
